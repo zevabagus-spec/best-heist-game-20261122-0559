@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vaultlight — The Meridian Gallery Heist</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #0d1122; }
+  body { display: flex; align-items: center; justify-content: center; }
+  #game {
+    display: block;
+    width: min(100vw, calc(100vh * 1280 / 720));
+    height: min(100vh, calc(100vw * 720 / 1280));
+    touch-action: none;
+    background: #0d1122;
+  }
+  /* Read aloud, never shown: the status line screen readers announce. */
+  #status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+</style>
+</head>
+<body>
+<canvas id="game" aria-label="Vaultlight: a top-down heist game. Sneak Wren through the Meridian Gallery, dodge guard vision cones and cameras, lift the loot, and escape before the alarm hits 100."></canvas>
+<p id="status" role="status" aria-live="polite"></p>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
